@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title') / {{ config('app.name', 'Hospital System') }}</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -23,7 +23,7 @@
         <!-- navbar starts -->
         <nav class="navbar navbar-expand-lg navbar-light bg-info py-0">
             <div class="container">
-                <a class="navbar-brand py-0" href="index.html">
+                <a class="navbar-brand py-0" href="{{ route('home') }}">
                     <img src="images/logo.jpg" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -34,28 +34,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active text-uppercase oswald-reg fs-16 text-white" aria-current="page"
-                                href="index.html">Home</a>
+                            <a class="nav-link active text-uppercase oswald-reg fs-16 text-white" aria-current="page" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="about us.html">About
-                                Us</a>
+                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="{{ route('about') }}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="#">Doctor's
-                                Schedule</a>
+                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="{{ route('schedule') }}">Doctor's Schedule</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="#">Medical
-                                Record</a>
+                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="{{ route('record') }}">Medical Record</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white"
-                                href="logindetail.html">Login</a>
+                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="{{ route('login') }}">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white"
-                                href="#">Appointment</a>
+                            <a class="nav-link text-uppercase oswald-reg fs-16 text-white" href="{{ route('appointment') }}">Appointment</a>
                         </li>
 
                     </ul>
