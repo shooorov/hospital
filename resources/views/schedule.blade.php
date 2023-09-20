@@ -108,7 +108,8 @@
                                 provident laudantium similique sequi? Illo quae quis molestiae doloremque adipisci,
                                 cupiditate autem dolore.</p>
                             <div class="about-btn text-center">
-                                <a class="cta-btn text-white oswald-med fs-16 text-uppercase" href="about us.html">Learn
+                                <a class="cta-btn text-white oswald-med fs-16 text-uppercase"
+                                    href="{{ route('about') }}">Learn
                                     More</a>
                             </div>
                         </div>
